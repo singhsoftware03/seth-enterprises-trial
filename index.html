@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seth Enterprises CPA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        section {
+            padding: 60px 20px;
+            margin-top: 60px;
+        }
+
+        #home {
+            background-color: #f4f4f4;
+        }
+
+        #services {
+            background-color: #e2e2e2;
+        }
+
+        #client-portal {
+            background-color: #d0d0d0;
+        }
+
+        #contact-us {
+            background-color: #bfbfbf;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#client-portal">Client Portal</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to Seth Enterprises CPA</h1>
+        <p>Personalized client service is our number one commitment. We specialize in individual and small/home-based business taxes, offering personal one-on-one consultations to understand your unique tax situation.</p>
+        <p>We are licensed CPAs in MD and VA and prepare tax returns for clients in all states. Proudly serving our clients for over 30 years, we stay updated with continually changing tax laws to identify opportunities to reduce your current and future taxes.</p>
+    </section>
+
+    <section id="services">
+        <h2>Tax & Business Services</h2>
+        <ul>
+            <li>Tax Preparation</li>
+            <li>Tax Planning</li>
+            <li>New Business Formation</li>
+            <li>Tax Controversy</li>
+        </ul>
+    </section>
+
+    <section id="client-portal">
+        <h2>Client Portal</h2>
+        <p>As a valued client, you get a secure, password-protected portal to exchange financial documents, tax returns, and other supporting receipts from anywhere at any time.</p>
+        <a href="https://sethenterprisescpa.sharefile.com" target="_blank">Access Client Portal</a>
+    </section>
+
+    <section id="contact-us">
+        <h2>Contact Us</h2>
+        <p>Phone: (703) 723-9651</p>
+        <p>Email: info@sethenterprisescpa.com</p>
+        <p>We are conveniently located in Ashburn, VA. Our core services include individual and small/home-based business income tax preparation and planning. We also provide expert advice in retirement planning, education planning, real estate transaction structuring, debt forgiveness & foreclosures, IRS problem resolution & audit representation, and small business accounting.</p>
+    </section>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - document.querySelector('nav').offsetHeight,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
